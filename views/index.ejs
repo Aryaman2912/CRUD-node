@@ -1,0 +1,8 @@
+<%- include("partials/header.ejs") %> 
+
+<% movies.forEach(function(movie){ %>
+    <h2><%= movie.title %> </h2>
+    <p><%= movie.rating %> / 5</p>
+    <p><%= movie.description %> </p>
+<% }); %>
+<%- include("partials/footer.ejs") %> 
