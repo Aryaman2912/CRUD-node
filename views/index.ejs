@@ -1,8 +1,10 @@
-<%- include("partials/header.ejs") %> 
+<%- include("partials/header") %> 
 
 <% movies.forEach(function(movie){ %>
     <h2><%= movie.title %> </h2>
-    <p><%= movie.rating %> / 5</p>
-    <p><%= movie.description %> </p>
+    <p><%= movie.rating %> / 10</p>
+    <img src="<%= movie.image %>" alt="">
+    <p><%= movie.review %> </p>
+    <a href="/movies/<%= movie._id %> ">Read More</a>
 <% }); %>
-<%- include("partials/footer.ejs") %> 
+<%- include("partials/footer") %> 

@@ -1,0 +1,13 @@
+<%- include("partials/header") %> 
+
+<h1>Edit <%= movie.title %> </h1>
+<form action="/movies/<%= movie._id %>/?_method=PUT" method="POST">
+    <input type="text" name="movie[title]" placeholder="title" value="<%= movie.title %> ">
+    <input type="number" name="movie[rating]" min="1" max="10" placeholder="rating" value="<%= movie.rating %> ">
+    <input type="text" name="movie[image]" placeholder="image url" value="<%= movie.image %>">
+    <textarea name="movie[review]" id="" cols="30" rows="10"><%= movie.review %> </textarea>
+    <button>Submit</button>
+</form>
+
+<%- include("partials/footer") %> 
+
