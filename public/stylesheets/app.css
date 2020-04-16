@@ -1,0 +1,34 @@
+body{
+    text-align: center;
+    margin: 100px auto;
+    background:;
+}
+
+h1{
+    margin: 20px;
+}
+
+.form-control{
+    width: 70%;
+    margin: 15px auto;
+    align-items: center;
+    /* border-radius: 2%; */
+}
+.btn{
+    width: 70%;
+    height: 40px;
+    margin:10px;
+    margin-bottom: 20px;
+}
+.container{
+    margin: 20px auto;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    border: 5px solid rgb(16, 144, 248);
+    border-radius: 15px;
+}
+
+textarea.form-control{
+    height: 50px;
+}

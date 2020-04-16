@@ -4,5 +4,9 @@
 <img src="<%= Movie.image %>" alt="Image">
 <p><%= Movie.rating %>/10 </p>
 <p><%= Movie.review %> </p>
+<a class="btn btn-xs btn-warning" href="/movies/<%= Movie._id %>/edit">Edit Review</a>
+<form action="/movies/<%= Movie._id  %>/?_method=DELETE" method="POST"  class="delete-form">
+    <button class="btn btn-xs btn-danger">Delete Review</button>
+</form>
 
 <%- include("partials/footer") %> 

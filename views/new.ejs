@@ -1,13 +1,24 @@
 <%- include("partials/header") %> 
 
-<h1>Add new movie</h1>
-<form action="/movies/" method="POST">
-    <input type="text" name="movie[title]" placeholder="Title">
-    <input type="number" name="movie[rating]" min="1" max="10" placeholder="Rating">
-    <input type="text" name="movie[image]" placeholder="Image url">
-    <textarea name="movie[review]" id="" cols="30" rows="10" placeholder="Review"></textarea>
-    <button>Submit</button>
-</form>
+
+<div class="container">
+    <h1>Add new movie</h1>
+    <form action="/movies/" method="POST">
+        <div>
+            <input type="text" name="movie[title]" placeholder="Title" class="form-control">
+        </div>
+        <div>
+            <input type="number" name="movie[rating]" min="1" max="10" placeholder="Rating" class="form-control">
+        </div>
+        <div>
+            <input type="text" name="movie[image]" placeholder="Image url" class="form-control">
+        </div>
+        <div>
+            <textarea name="movie[review]" id="" cols="30" rows="10" placeholder="Review" class="form-control textarea"></textarea>
+        </div>
+        <button class="btn btn-primary">Submit</button>
+    </form>
+</div>
 
 <%- include("partials/footer") %> 
 

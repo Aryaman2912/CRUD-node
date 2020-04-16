@@ -72,6 +72,7 @@ app.get("/movies/:id",function(req,res){
     });
 });
 
+//EDIT
 app.get("/movies/:id/edit",function(req,res){
     Movie.findById(req.params.id,function(err,movie){
         if(err){
@@ -83,6 +84,7 @@ app.get("/movies/:id/edit",function(req,res){
     });
 });
 
+//UPDATE
 app.put("/movies/:id",function(req,res){
     Movie.findByIdAndUpdate(req.params.id,req.body.movie,function(err,movie){
         if(err){
@@ -91,9 +93,20 @@ app.put("/movies/:id",function(req,res){
         else{
             res.redirect("/movies/" + req.params.id)
         }
+    });
+});
+
+//DESTROY
+app.delete("/movies/:id",function(req,res){
+    Movie.findByIdAndRemove(req.params.id,function(err){
+        if(err){
+            res.redirect("/movies");
+        }
+        else{
+            res.redirect("/movies");
+        }
     })
 })
-
 app.listen(8000,function(){
     console.log("Server Started")
 })
