@@ -1,13 +1,24 @@
 <%- include("partials/header") %> 
 
-<h1>Edit <%= movie.title %> </h1>
-<form action="/movies/<%= movie._id %>/?_method=PUT" method="POST">
-    <input type="text" name="movie[title]" placeholder="title" value="<%= movie.title %> ">
-    <input type="number" name="movie[rating]" min="1" max="10" placeholder="rating" value="<%= movie.rating %> ">
-    <input type="text" name="movie[image]" placeholder="image url" value="<%= movie.image %>">
-    <textarea name="movie[review]" id="" cols="30" rows="10"><%= movie.review %> </textarea>
-    <button>Submit</button>
-</form>
+
+<div class="container">
+    <h1>Edit <%= Movie.title %> </h1>
+    <form action="/movies/<%= Movie._id %>/?_method=PUT" method="POST">
+        <div>
+            <input type="text" name="movie[title]" class="form-control" value="<%= Movie.title %> ">
+        </div>
+        <div>
+            <input type="number" name="movie[rating]" min="1" max="10" step="0.5" value="<%= Movie.rating %> " class="form-control">
+        </div>
+        <div>
+            <input type="text" name="movie[image]" value="<%= Movie.image %> " class="form-control">
+        </div>
+        <div>
+            <textarea name="movie[review]" id="" cols="30" rows="10" class="form-control textarea"><%= Movie.review %> </textarea>
+        </div>
+        <button class="btn btn-primary">Update</button>
+    </form>
+</div>
 
 <%- include("partials/footer") %> 
 

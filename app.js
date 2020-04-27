@@ -79,7 +79,7 @@ app.get("/movies/:id/edit",function(req,res){
             res.send("Oops! Something went wrong!")
         }
         else{
-            res.render("edit",{movie:movie})
+            res.render("edit",{Movie:movie})
         }
     });
 });
