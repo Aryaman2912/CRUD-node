@@ -1,11 +1,18 @@
 <%- include("partials/header") %> 
+<div class="">
+    <h1 class="header">Your movies</h1>
+    <% movies.forEach(function(movie){ %>
+        <div class="movie-index">
+            <h2 class="movie-title"><%= movie.title %> </h2>
+            <hr class="break">
+            <p class="movie-rating">Your Rating - <%= movie.rating %> / 10</p>
+            <hr>
+            <img class="image movie-image" src="<%= movie.image %>" alt="">
+            <p class="movie-review"><%= movie.review %> </p>
+            <hr>
+            <a href="/movies/<%= movie._id %> " class="detail">Read More</a>
+        </div>
+    <% }); %>
+</div>
 
-<h1>Welcome to the Movie Review App!</h1>
-<% movies.forEach(function(movie){ %>
-    <h2><%= movie.title %> </h2>
-    <p><%= movie.rating %> / 10</p>
-    <img src="<%= movie.image %>" alt="">
-    <p><%= movie.review %> </p>
-    <a href="/movies/<%= movie._id %> ">Read More</a>
-<% }); %>
 <%- include("partials/footer") %> 

@@ -1,12 +1,15 @@
 <%- include("partials/header") %>
+<div class="">
+    <h1 class="movie-title"><%= Movie.title %> </h1>
+    <img class="movie-image image" src="<%= Movie.image %>" alt="Image">
+    <p class="movie-rating">Your rating - <%= Movie.rating %>/10 </p>
+    <p class="movie-review"><%= Movie.review %> </p>
+    <a class="btn btn-xs btn-warning" href="/movies/<%= Movie._id %>/edit">Edit Review</a>
+    <form action="/movies/<%= Movie._id  %>/?_method=DELETE" method="POST"  class="delete-form">
+        <button class="btn btn-xs btn-danger">Delete Review</button>
+    </form>
+</div>
 
-<h1><%= Movie.title %> </h1>
-<img src="<%= Movie.image %>" alt="Image">
-<p><%= Movie.rating %>/10 </p>
-<p><%= Movie.review %> </p>
-<a class="btn btn-xs btn-warning" href="/movies/<%= Movie._id %>/edit">Edit Review</a>
-<form action="/movies/<%= Movie._id  %>/?_method=DELETE" method="POST"  class="delete-form">
-    <button class="btn btn-xs btn-danger">Delete Review</button>
-</form>
+<button class="btn btn-default"><a href="/movies/">Go back</a></button>
 
 <%- include("partials/footer") %> 

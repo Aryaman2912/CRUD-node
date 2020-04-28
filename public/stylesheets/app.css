@@ -1,9 +1,12 @@
 body{
     text-align: center;
     margin: auto;
-    background:;
+    /* background:black;
+    color: white; */
 }
-
+.header{
+    font-size: 50px;
+}
 h1{
     margin: 20px;
 }
@@ -19,6 +22,7 @@ h1{
     height: 40px;
     margin:10px;
     margin-bottom: 20px;
+    color:white;
 }
 .container{
     margin: 20px auto;
@@ -31,4 +35,54 @@ h1{
 
 textarea.form-control{
     height: 50px;
+}
+
+.movie-index{
+    border: 2px solid #d6d4d4;
+    border-radius: 2px;
+    margin: 60px 220px 60px 220px;
+    padding: 30px;
+    /* color: white;
+    background: black; */
+}
+
+.movie-title{
+    margin: 15px;
+    padding:10px;
+    font-size: 50px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.movie-rating{
+    font-size: 25px;
+    margin: 15px;
+    padding: 10px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.movie-image{
+    text-align: left;
+    width: 300px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.movie-review{
+    font-size: 25px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+.detail{
+    font-size: 20px;
+}
+
+.break{
+    color: blue;
+    height: 5px;
+    
 }
